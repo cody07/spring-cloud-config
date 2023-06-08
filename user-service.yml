@@ -1,0 +1,15 @@
+#oken:
+# expiration_time: 86400000
+# secret: user_token_native_user_service
+gateway:
+  ip: 192.168.1.5
+srping:
+  datasource:
+    url: jdbc:h2:~/testdb;MODE=MYSQL;AUTO_SERVER=true
+    driver-class-name: org.h2.Driver
+    username: sa
+    password: '{cipher}AYBJGyrXNzeiZxuA3pSu+Gdl6s+KFnLX1GFnsSjnIEAXhsQWcCu5ozX00zafbi9rM5p3v4Y8FAjGKXPp1iceUCz+JEX7dIixxdiWw/9M8ccYJit6oyPNB7Japkr6jvR12WrTspJ1jQek9re4thfbOj2ZtOJWZacnUwoFyRNS0GQPD2nkgvx2Scvyi/SNkXdT1V6g4bjpKbe9B2widsSY0kqBlqeHhUfPQIoScvmk4/h8KL3L/LBr0vZbt6EST1B+AZazRAuLLi7/M1ew/yRcBirfk6zEkmKQMbPNthi3fcvwDWQwVqpTKH+OqEzLulErQUXNxM5JTd0Pq1gnjRZKWESehn8KkARcZQdig660hCQe/54nLPBi3chhHOSXwPyC3QLKr01h6TS98G0+0kbZFL/R0JuHQZsaJXgADZZOGIDYLYeBLTYojmLdII69V4SdGL79tbxUhQM3YsNvi3oyXGN5VwvcPFpZzNujpjAajSoZLa0UcuJhSv6lS5MvdHmjEQTLLLfjgUZfR9roOti9RNLMUpA4xewKXS0PxcNhIINaOw=='
+order-service:
+  url: http://ORDER-SERVICE/order-service/%s/orders
+  exception:
+    order_is_empty: there is no orders.
